@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dosan.braillease",
+      "sha256_cert_fingerprints": [
+        "53:75:E1:32:01:F5:5E:82:B5:92:1A:86:6C:84:1F:B1:B1:B1:68:29:85:F8:7A:C2:30:FF:DD:11:FD:01:AE:A0"
+      ]
+    }
+  }
+]
