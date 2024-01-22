@@ -40,7 +40,7 @@ export async function generateMetadata(
   /* const previousImages = (await parent).openGraph?.images || [] */
 
   return {
-    title: params.phrase+"change this",
+    title: params.phrase,
 
     openGraph: {
       images: [
