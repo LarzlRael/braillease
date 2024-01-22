@@ -40,13 +40,13 @@ export async function generateMetadata(
   /* const previousImages = (await parent).openGraph?.images || [] */
 
   return {
-    title: params.phrase,
+    title: 'BraillEasy',
 
     openGraph: {
       images: [
         'https://www.gob.mx/cms/uploads/article/main_image/30006/braille3.jpg',
       ],
-      description: `Asi se escribe esto ${params.phrase}`,
+      description: `Asi se escribe ${params.phrase} en Braille`,
       url: `https://braillease.web.app/`,
     },
   }
