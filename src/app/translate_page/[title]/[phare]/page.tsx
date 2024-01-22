@@ -1,3 +1,4 @@
+import { descriptionMeta, logoApp } from '@/constants/appInfo'
 import type { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
@@ -5,22 +6,21 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-async function generateMetadata(
+/* important the "export" */
+
+export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   // read route params
   const phrase = params.phrase
-
+  const metadata = descriptionMeta(phrase)
   return {
-    title: 'BraillEasy',
-
+    title: metadata.title,
     openGraph: {
-      images: [
-        'https://www.gob.mx/cms/uploads/article/main_image/30006/braille3.jpg',
-      ],
-      description: `Asi se escribe ${params.phrase} en Braille`,
-      url: `https://braillease-git-main-larzlrael.vercel.app//`,
+      images: [metadata.logo],
+      description: metadata.description,
+      url: metadata.url,
     },
   }
 }
